@@ -1,0 +1,20 @@
+.Exercise {
+	list-style-type: none;
+	height: 40px;
+	font-size: 20px;
+	font-family: "Open Sans", sans-serif;
+}
+
+.outputDesired, .output, .input {
+	font-weight: 600;
+}
+
+.regexpString {
+	font-size: 20px;
+	font-family: "Open Sans", sans-serif;
+	padding-left: 2px;
+}
+
+.ExerciseReady input {
+	background-color: #5EFB6E;
+}
