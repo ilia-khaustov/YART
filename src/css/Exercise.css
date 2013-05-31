@@ -5,9 +5,10 @@
 	font-family: "Open Sans", sans-serif;
     display: block;
     text-align: center;
+    margin-top: 15px;
 }
 
-.outputDesired, .output, .input {
+.outputDesired, .output {
 	font-weight: 600;
 }
 
@@ -25,12 +26,15 @@ span {
     display: inline-block;
     min-width: 150px;
 }
+    .input {
+        text-align: left;
+    }
 
 .ExerciseReady {
     color: #aaa;
 }
 
 .ExerciseReady input {
-	background-color: #5EFB6E;
     color: #aaa;
+    outline: auto 8px green;
 }

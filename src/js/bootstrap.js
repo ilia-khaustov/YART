@@ -1,13 +1,25 @@
 (function() {
-    var exerciseModel = new YART.ExerciseModel();
-    exerciseModel.setInputOutput("qwerty", "erty");
+        
+    var exercisesJSON = {
+        1 : {
+            "input" : "qwertyui",
+            "output" : "er"
+        },
+        2 : {
+            "input" : "A b c dd e",
+            "output" : "dd"
+        },
+        3 : {
+            "input" : "123456789",
+            "output" : "56789"
+        }
+    };
 
-    var exerciseModel2 = new YART.ExerciseModel();
-    exerciseModel2.setInputOutput("asd123fg", "123");
+    for (var key in exercisesJSON) {
+        var view = new YART.ExerciseView(
+                YART.ExerciseModel.fromJSON(exercisesJSON[key])
+            );
+        document.body.appendChild(view.build());
+    }
 
-    var view = new YART.ExerciseView(exerciseModel);
-    document.body.appendChild(view.build());
-
-    var view2 = new YART.ExerciseView(exerciseModel2);
-    document.body.appendChild(view2.build());
 }());

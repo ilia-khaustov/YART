@@ -40,4 +40,11 @@ maria.Model.subclass(YART, 'ExerciseModel', {
 		}
 
 	}
-})
+});
+
+YART.ExerciseModel.fromJSON = function(exerciseJSON) {
+	var model = new YART.ExerciseModel();
+	model._input = exerciseJSON.input;
+	model._output = exerciseJSON.output;
+	return model;
+};
