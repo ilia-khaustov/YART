@@ -3,6 +3,8 @@
 	height: 40px;
 	font-size: 20px;
 	font-family: "Open Sans", sans-serif;
+    display: block;
+    text-align: center;
 }
 
 .outputDesired, .output, .input {
@@ -15,6 +17,20 @@
 	padding-left: 2px;
 }
 
+input:focus {
+    outline: 0;
+}
+
+span {
+    display: inline-block;
+    min-width: 150px;
+}
+
+.ExerciseReady {
+    color: #aaa;
+}
+
 .ExerciseReady input {
 	background-color: #5EFB6E;
+    color: #aaa;
 }
