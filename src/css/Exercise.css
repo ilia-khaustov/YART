@@ -1,8 +1,8 @@
 .Exercise {
 	list-style-type: none;
 	height: 40px;
-	font-size: 20px;
-	font-family: "Open Sans", sans-serif;
+	font-size: 18px;
+	font-family: "Consolas", monospace;
     display: block;
     text-align: center;
     margin-top: 15px;
@@ -13,8 +13,8 @@
 }
 
 .regexpString {
-	font-size: 20px;
-	font-family: "Open Sans", sans-serif;
+	font-size: 18px;
+	font-family: "Consolas", monospace;
 	padding-left: 2px;
 }
 
