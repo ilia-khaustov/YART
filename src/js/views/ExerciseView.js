@@ -11,6 +11,7 @@ maria.ElementView.subclass(YART, 'ExerciseView', {
 				model.getInput();
 			this.find('.outputDesired').innerHTML = 
 				model.getOutput();
+			this.getController().setResult();
 			aristocrat[model.isReady() ? 'addClass' : 'removeClass'](
 				this.find('.Exercise'), 'ExerciseReady')
 		},

@@ -1,5 +1,5 @@
 (function() {
-        
+
     var exercisesJSON = {
         1 : {
             "input" : "Rumpelstiltskin",
