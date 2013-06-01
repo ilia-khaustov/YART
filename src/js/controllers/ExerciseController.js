@@ -1,17 +1,29 @@
 maria.Controller.subclass(YART, 'ExerciseController', {
 	properties: {
 
-		onExpressionChanged: function(evt) {
-			this.getModel().setRegExp(evt.srcElement.value);
-			var re = new RegExp(this.getModel().getRegExp(), "");
-			var result = re.exec(this.getModel().getInput());
+		setResult: function() {
+			var model = this.getModel();
+			var patternAndFlags = model.getPatternFind().split("/");
+			var patternFind = new RegExp(patternAndFlags[0], patternAndFlags[1]);
+			var patternReplace = model.getPatternReplace();
+			var result = model.getInput().replace(patternFind, patternReplace);
 			result = (result + "" == "null" || result == "" ? "..." : result + "");
 			this.getView().setResult(result);
 		},
 
+		onPatternFindChanged: function(evt) {
+			this.getModel().setPatternFind(evt.srcElement.value);
+			this.setResult();
+		},
+
+		onPatternReplaceChanged: function(evt) {
+			this.getModel().setPatternReplace(evt.srcElement.value);
+			this.setResult();
+		},
+
 		onOutputChanged: function(evt) {
 			this.getModel().setReady(
-				evt.srcElement.data == this.getModel().getOutput());
+				evt.srcElement.data.valueOf() === this.getModel().getOutput().valueOf());
 		}
 	}
 })

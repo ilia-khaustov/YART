@@ -4,8 +4,10 @@ maria.Model.subclass(YART, 'ExerciseModel', {
 		_input: '',
 		// Output string that should be got
 		_output: '',
-		// Current regexp as string
-		_regexpString: '',
+		// Current search pattern
+		_patternFind: '',
+		// Current replace pattern
+		_patternReplace: '',
 		// Status of exercise
 		_isReady: false,
 
@@ -22,12 +24,20 @@ maria.Model.subclass(YART, 'ExerciseModel', {
 			return this._output;
 		},
 
-		getRegExp: function() {
-			return this._regexpString;
+		getPatternFind: function() {
+			return this._patternFind;
 		},
 
-		setRegExp: function(newRegexpString) {
-			this._regexpString = "" + newRegexpString;
+		setPatternFind: function(pattern) {
+			this._patternFind = "" + pattern;
+		},
+
+		getPatternReplace: function() {
+			return this._patternReplace;
+		},
+
+		setPatternReplace: function(pattern) {
+			this._patternReplace = "" + pattern;
 		},
 
 		isReady: function() {

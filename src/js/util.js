@@ -5,7 +5,3 @@
 YART.escapeRegExp = function(str) {
   return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
 }
-
-YART.escapeHTML = function(str) {
-    return str.replace('&', '&amp;').replace('<', '&lt;');
-};

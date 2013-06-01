@@ -1,15 +1,16 @@
 maria.ElementView.subclass(YART, 'ExerciseView', {
 	uiActions: {
-		'input .regexpString' : 'onExpressionChanged',
+		'input .patternFind' : 'onPatternFindChanged',
+		'input .patternReplace' : 'onPatternReplaceChanged',
 		'DOMSubtreeModified .output' : 'onOutputChanged'
 	},
 	properties: {
 		buildData: function() {
 			var model = this.getModel();
 			this.find('.input').innerHTML = 
-				YART.escapeHTML(model.getInput());
+				model.getInput();
 			this.find('.outputDesired').innerHTML = 
-				YART.escapeHTML(model.getOutput());
+				model.getOutput();
 			aristocrat[model.isReady() ? 'addClass' : 'removeClass'](
 				this.find('.Exercise'), 'ExerciseReady')
 		},
@@ -18,7 +19,7 @@ maria.ElementView.subclass(YART, 'ExerciseView', {
 		},
 		setResult: function(result) {
 			this.find('.output').innerHTML = 
-				YART.escapeHTML(result);
+				result + "";
 		}
 	}
 })
