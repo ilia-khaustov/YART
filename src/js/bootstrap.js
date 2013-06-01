@@ -2,16 +2,16 @@
         
     var exercisesJSON = {
         1 : {
-            "input" : "qwertyui",
-            "output" : "er"
+            "input" : "Rumpelstiltskin",
+            "output" : "Rmplstltskn"
         },
         2 : {
-            "input" : "A b c dd e",
-            "output" : "dd"
+            "input" : "I am not a jerk",
+            "output" : "I am a jerk"
         },
         3 : {
-            "input" : "123456789",
-            "output" : "56789"
+            "input" : "Булочка",
+            "output" : "Белочка"
         }
     };
 
