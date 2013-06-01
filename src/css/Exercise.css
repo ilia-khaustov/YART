@@ -4,15 +4,15 @@
 	font-size: 18px;
 	font-family: "Consolas", monospace;
     display: block;
-    text-align: center;
     margin-top: 15px;
 }
 
 .outputDesired, .output {
 	font-weight: 600;
+    white-space: pre;
 }
 
-.regexpString {
+.patternFind, .patternReplace {
 	font-size: 18px;
 	font-family: "Consolas", monospace;
 	padding-left: 2px;
@@ -24,10 +24,10 @@ input:focus {
 
 span {
     display: inline-block;
-    min-width: 150px;
 }
     .input {
-        text-align: left;
+        text-align: right;
+        min-width: 150px;
     }
 
 .ExerciseReady {
