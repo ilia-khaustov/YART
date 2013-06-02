@@ -18,8 +18,6 @@ maria.Controller.subclass(YART, 'JSONLoaderController', {
 		        return json;
 		    })();
 
-
-
 		    var exercisesListModel = new YART.ExercisesListModel();
 
 		    for (var key in exercisesJSON) {
@@ -28,7 +26,8 @@ maria.Controller.subclass(YART, 'JSONLoaderController', {
 		            );
 		    }
 
-		    document.body.appendChild(
+		    $('.ExercisesList').remove();
+		    $('body').append(
 		        (new YART.ExercisesListView(exercisesListModel)).build()
 		        );
 		}
