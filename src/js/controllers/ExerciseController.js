@@ -8,22 +8,24 @@ maria.Controller.subclass(YART, 'ExerciseController', {
 			var patternReplace = model.getPatternReplace();
 			var result = model.getInput().replace(patternFind, patternReplace);
 			result = (result + "" == "null" || result == "" ? "..." : result + "");
+			
+			this.checkResult(result);
 			this.getView().setResult(result);
 		},
 
 		onPatternFindChanged: function(evt) {
-			this.getModel().setPatternFind(evt.srcElement.value);
+			this.getModel().setPatternFind(evt.target.value);
 			this.setResult();
 		},
 
 		onPatternReplaceChanged: function(evt) {
-			this.getModel().setPatternReplace(evt.srcElement.value);
+			this.getModel().setPatternReplace(evt.target.value);
 			this.setResult();
 		},
 
-		onOutputChanged: function(evt) {
+		checkResult: function(result) {
 			this.getModel().setReady(
-				evt.srcElement.data.valueOf() === this.getModel().getOutput().valueOf());
+				result === this.getModel().getOutput());
 		}
 	}
 })

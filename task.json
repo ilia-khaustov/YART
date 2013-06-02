@@ -1,0 +1,14 @@
+{
+    1 : {
+        "input" : "Rumpelstiltskin",
+        "output" : "Rmplstltskn"
+    },
+    2 : {
+        "input" : "I am not a jerk",
+        "output" : "I am a jerk"
+    },
+    3 : {
+        "input" : "Булочка",
+        "output" : "Белочка"
+    }
+}

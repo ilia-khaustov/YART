@@ -1,10 +1,10 @@
 maria.ElementView.subclass(YART, 'ExerciseView', {
 	uiActions: {
 		'input .patternFind' : 'onPatternFindChanged',
-		'input .patternReplace' : 'onPatternReplaceChanged',
-		'DOMSubtreeModified .output' : 'onOutputChanged'
+		'input .patternReplace' : 'onPatternReplaceChanged'
 	},
 	properties: {
+
 		buildData: function() {
 			var model = this.getModel();
 			this.find('.input').innerHTML = 
@@ -15,9 +15,11 @@ maria.ElementView.subclass(YART, 'ExerciseView', {
 			aristocrat[model.isReady() ? 'addClass' : 'removeClass'](
 				this.find('.Exercise'), 'ExerciseReady')
 		},
+
 		update: function() {
 			this.buildData();
 		},
+
 		setResult: function(result) {
 			this.find('.output').innerHTML = 
 				result + "";
