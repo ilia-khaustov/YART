@@ -1,0 +1,56 @@
+.JSONUrl {
+    margin: 0px 0px 0px 6px;
+    padding: 3px 3px 3px 3px;
+    font-size: 16px;
+    font-family: "Segoe UI", sans-serif;
+}
+
+#JSONLoad {
+    margin: 5px 0px 0px 5px;
+    font-size: 16px;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.ExercisesList {
+    margin: 10 0 0 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.Exercise  {
+	list-style-type: none;
+	min-height: 55px;
+    margin: 5px 5px 5px 5px;
+    padding: 6px 8px 5px 6px;
+    display: inline-block;
+    background-color: #eee;
+    border-radius: 3px;
+    border: 1px solid #eee;
+    text-align: center;
+}
+
+.outputDesired, .output {
+	font-weight: 600;
+    white-space: pre;
+}
+
+.patternFind, .patternReplace {
+	font-size: 16px;
+	font-family: "Consolas", monospace;
+	padding-left: 2px;
+}
+
+input:focus {
+    outline: 0;
+}
+
+.ExerciseReady {
+    color: #aaa;
+    border: 1px solid green;
+}
+
+.ExerciseReady input {
+    color: #aaa;
+    outline: auto 3px green;
+}

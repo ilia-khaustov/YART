@@ -45,8 +45,11 @@ maria.Model.subclass(YART, 'ExerciseModel', {
 		},
 
 		setReady: function(ready) {
-			this._isReady = !!ready;
-			this.dispatchEvent({type: 'change'});
+			ready = !!ready;
+			if (this._isReady !== ready) {
+				this._isReady = ready;
+				this.dispatchEvent({type: 'change'});
+			}
 		}
 
 	}
